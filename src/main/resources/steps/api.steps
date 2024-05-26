@@ -1,0 +1,17 @@
+Composite: When I send HTTP $requestType request for Trello relative URL `$relativeURL`
+When I execute HTTP <requestType> request for resource with relative URL `<relativeURL>?key=${apiKey}&token=${apiToken}`
+
+
+Composite: When I get all boards for `$userName` user
+When I send HTTP GET request for Trello relative URL `/members/<userName>/boards`
+
+
+Composite: When I get details for board with `$boardId` ID
+When I send HTTP GET request for Trello relative URL `boards/<boardId>`
+
+
+Composite: When I DELETE `$boardName` board in `$userName` user workspace
+When I get all boards for `<userName>` user
+When I save JSON element from `${response}` by JSON path `$[?(@.name=="<boardName>")].id` to SCENARIO variable `boardIdToDelete`
+When I send HTTP DELETE request for Trello relative URL `boards/#{replaceFirstByRegExp(\[\"(.*)\"\], $1, ${boardIdToDelete})}`
+Then response code is EQUAL_TO `200`

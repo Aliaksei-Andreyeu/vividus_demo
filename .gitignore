@@ -17,3 +17,4 @@ output/
 
 # macOS system files
 .DS_Store
+.op

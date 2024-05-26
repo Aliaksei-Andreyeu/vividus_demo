@@ -1,11 +1,17 @@
-project.description = 'put project description here'
-group = 'put your project group here, e.g. org.vividus.starter'
+project.description = 'Sample tests demoing VIVIDUS capabilities'
+group = 'org.vividus.demo'
 
 ext.buildSystemPath = "${System.env.VIVIDUS_BUILD_SYSTEM_HOME?:buildSystemRootDir}/${buildSystemVersion}"
 
 apply from: "${buildSystemPath}/vividus-test-project.gradle"
 
 dependencies {
-    implementation platform(group: 'org.vividus', name: 'vividus-bom', version: '0.6.10')
+    implementation platform(group: 'org.vividus', name: 'vividus-bom', version: '0.6.12')
     implementation(group: 'org.vividus', name: 'vividus')
+    implementation(group: 'org.vividus', name: 'vividus-plugin-electron')
+    implementation(group: 'org.vividus', name: 'vividus-plugin-rest-api')
+    implementation(group: 'org.vividus', name: 'vividus-plugin-json')
+    implementation(group: 'org.vividus', name: 'vividus-plugin-web-app')
+    implementation(group: 'org.vividus', name: 'vividus-plugin-mobile-app')
+    implementation(group: 'org.vividus', name: 'vividus-plugin-visual')
 }

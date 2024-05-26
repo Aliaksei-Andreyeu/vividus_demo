@@ -1,2 +1,9 @@
 {
+    "JIRA-?": {
+        "type": "Internal",
+        "assertionPattern": ".*(a value equal to).*",
+        "storyPattern": ".*StarWars.*",
+        "stepPattern": ".*(is equal to).*",
+        "description": "Invalid Reponse Code"
+    }
 }
