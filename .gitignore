@@ -10,6 +10,8 @@
 *.ipr
 *.iws
 **/.idea/
+.vscode
+.github
 
 #Build Dirs#
 output/
