@@ -6,7 +6,7 @@ ext.buildSystemPath = "${System.env.VIVIDUS_BUILD_SYSTEM_HOME?:buildSystemRootDi
 apply from: "${buildSystemPath}/vividus-test-project.gradle"
 
 dependencies {
-    implementation platform(group: 'org.vividus', name: 'vividus-bom', version: '0.6.15')
+    implementation platform(group: 'org.vividus', name: 'vividus-bom', version: '0.6.16-SNAPSHOT')
     implementation(group: 'org.vividus', name: 'vividus')
     implementation(group: 'org.vividus', name: 'vividus-plugin-electron')
     implementation(group: 'org.vividus', name: 'vividus-plugin-rest-api')
@@ -14,4 +14,5 @@ dependencies {
     implementation(group: 'org.vividus', name: 'vividus-plugin-web-app')
     implementation(group: 'org.vividus', name: 'vividus-plugin-mobile-app')
     implementation(group: 'org.vividus', name: 'vividus-plugin-visual')
+    implementation(group: 'org.vividus', name: 'vividus-mcp-server')
 }
